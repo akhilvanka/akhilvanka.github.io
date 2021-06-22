@@ -15,6 +15,13 @@ html {
     font: 16px/1;
     display: flex;
     justify-content: center;
+    transition: background 250ms;
+}
+
+.html-light-mode {
+    background-color: #EEEEEE;
+    color: #393E46;
+    transition: background 250ms;
 }
 
 body {
@@ -24,6 +31,13 @@ body {
   display: flex;
   min-height: 15ch;
   min-width: 30px;
+  transition: background 250ms;
+}
+
+.body-light-mode {
+    background-color: #EEEEEE;
+    color: #393E46;
+    transition: background 250ms;
 }
 
 a {
@@ -39,6 +53,37 @@ ul {
 }
 
 p #cursor {
-  background-color: #24242d;
+  background-color: #393E46;
   animation: blink 2s infinte;
+}
+
+
+.toggle {
+  --size: 1.5rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  cursor: pointer;
+  width: var(--size);
+  height: var(--size);
+  box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+  border-radius: 999px;
+  color: #EEEEEE;
+  transition: all 500ms;
+}
+.toggle:checked {
+  --ray-size: calc(var(--size) * -0.4);
+  --offset-orthogonal: calc(var(--size) * 0.65);
+  --offset-diagonal: calc(var(--size) * 0.45);
+  transform: scale(0.75);
+  color: #393E46;
+  box-shadow: inset 0 0 0 var(--size), calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size), var(--offset-orthogonal) 0 0 var(--ray-size), 0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size), 0 var(--offset-orthogonal) 0 var(--ray-size), calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0 var(--ray-size), var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size), calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size), var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
+}
+
+.toggle {
+  z-index: 1;
+    position: absolute;
+    top: 95%;
+    left: 97%;
 }

@@ -3,13 +3,11 @@
         <head>
           <title>~/home</title>
           <link rel="stylesheet" type="text/css" href="css/style.css">
+          <script type="text/javascript" src="js/min.js"></script>
      </head>
-    <body>
+    <body onload="updateTime(); setInterval('updateTime()', 1 )">
         <h1><span id="time"></span></h1>
-        <script>
-            var dt = new Date();
-            document.getElementById("time").innerHTML = dt.getTime();
-        </script>
+        <div><input id="toggle" class="toggle" type="checkbox" name="checkbox"/></div>
       <nav>
         <ul>
           <li><a href="https://reddit.com"/>reddit</a></li>
@@ -19,7 +17,7 @@
         <ul>
             <li><a href="***REMOVED***"/>genesis</li>
             <li><a href="https://google.com"/>google</li>
-            <li><a href="http://localhost"/>localhost</li>
+            <li><a href="127.0.0.1"/>localhost</li>
         </ul>
         <ul>
             <li><a href="https://stackoverflow.com"/>stack overflow</li>
