@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', function() {
         checkbox.addEventListener('change', function(event)
         {
             if (event.target.checked) {
-                console.log("Checked");
+//                console.log("Checked");
                 changeColor();
             }
             else {
-                console.log("Unchecked");
+//                console.log("Unchecked");
                 changeColor();
             }
         });
